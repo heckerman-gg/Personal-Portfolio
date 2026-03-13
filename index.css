@@ -1,0 +1,48 @@
+.profile-img-container {
+  width: 130px;
+  height: 130px;
+  border-radius: 12px;
+  padding: 2px;
+  border: 1px solid #dee2e6;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#cv-btn {
+  border: 1px solid #717171;
+  box-shadow: inset 0 2px 5px 1px #e6e7e8;
+}
+.verified-icon {
+  width: 30px;
+  height: 30px;
+}
+.icons {
+  width: 20px;
+  height: 20px;
+}
+
+.container-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.theme {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #dee2e6;
+}
+body {
+  transition: all 0.3s ease;
+}
+.dark-mode {
+  background-color: #131316;
+  color: #fff;
+}
+.profile-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9px;
+}

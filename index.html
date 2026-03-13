@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="global.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="p-3 container-lg">
+      <header class="col-12 col-md-11 d-flex align-items-center gap-3 p-3">
+        <div class="profile-img-container">
+          <img
+            src="./assets/images/light-mode-pfp.png"
+            class="pfp"
+            alt="Logo"
+          />
+        </div>
+        <div
+          class="w-100 d-flex justify-content-between col-12 align-items-center"
+        >
+          <div class="container-header">
+            <h1 class="display-6 mb-0 fw-bold">
+              Roni Sore
+              <img
+                src="./assets/images/icons8-verified-48.png"
+                class="verified-icon"
+                alt=""
+              />
+            </h1>
+            <ul class="list-unstyled text-secondary mb-0 fs-6">
+              <li><small>📍Based in Philippines</small></li>
+              <li><small>💻FullStack</small></li>
+            </ul>
+            <div class="w-100 d-flex flex-wrap gap-2 mt-2">
+              <button
+                class="header-btn flex-fill flex-md-grow-0 btn-sm rounded-2 px-2 bg-dark text-white"
+              >
+                <img src="./assets/images/github.png" class="icons" alt="" />
+                Github
+              </button>
+              <button
+                id="cv-btn"
+                class="header-btn flex-fill flex-md-grow-0 btn-sm rounded-2 px-2 btn-outline-secondary text-black"
+              >
+                <img src="./assets/images/file-text.png" class="icons" alt="" />
+                Download my CV
+              </button>
+            </div>
+          </div>
+
+          <button class="theme rounded-2">
+            <img src="./assets/images/moon.png" alt="" />
+          </button>
+        </div>
+      </header>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

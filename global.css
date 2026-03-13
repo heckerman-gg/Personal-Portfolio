@@ -1,0 +1,50 @@
+/* Bootstrap 5 Breakpoints */
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 375px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .theme {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .header-btn {
+    width: 100%;
+    padding: 5px;
+  }
+  .container-header {
+    text-align: center;
+  }
+}
+
+@media (min-width: 750px) {
+  header {
+    flex-direction: row;
+  }
+  .container-header {
+    display: flex;
+    text-align: left;
+  }
+  .header-btn {
+    width: auto;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
