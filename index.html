@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Personal Portfolio</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,8 +14,8 @@
     <link href="index.css" rel="stylesheet" />
   </head>
   <body>
-    <main class="p-3 container-lg">
-      <header class="col-12 col-md-11 d-flex align-items-center gap-3 p-3">
+    <main class="p-2 container-lg d-flex flex-column align-items-center">
+      <header class="col-12 col-md-9 d-flex align-items-center gap-3 p-3">
         <div class="profile-img-container">
           <img
             src="./assets/images/light-mode-pfp.png"
@@ -37,18 +37,18 @@
             </h1>
             <ul class="list-unstyled text-secondary mb-0 fs-6">
               <li><small>📍Based in Philippines</small></li>
-              <li><small>💻FullStack</small></li>
+              <li><strong>💻Aspiring FullStack Developer</strong></li>
             </ul>
             <div class="w-100 d-flex flex-wrap gap-2 mt-2">
               <button
-                class="header-btn flex-fill flex-md-grow-0 btn-sm rounded-2 px-2 bg-dark text-white"
+                class="header-btn github-btn flex-fill flex-md-grow-0 btn-sm rounded-2 px-2 bg-dark text-white"
               >
                 <img src="./assets/images/github.png" class="icons" alt="" />
                 Github
               </button>
               <button
                 id="cv-btn"
-                class="header-btn flex-fill flex-md-grow-0 btn-sm rounded-2 px-2 btn-outline-secondary text-black"
+                class="header-btn download-cv flex-fill flex-md-grow-0 btn-sm rounded-2 px-2 btn-outline-secondary text-black"
               >
                 <img src="./assets/images/file-text.png" class="icons" alt="" />
                 Download my CV
@@ -61,9 +61,36 @@
           </button>
         </div>
       </header>
-      <section
-        class="col-12 col-md-11 d-flex align-items-center gap-3 p-3"
-      ></section>
+      <div class="col-12 col-md-9 d-flex flex-column flex-lg-row gap-3 mt-4">
+        <section class="w-100 p-3">
+          <div class="about-me p-3 transition-all rounded-3">
+            <h4 class="fw-bold">About me</h4>
+            <p class="text-secondary">
+              I’m a 3rd-year Information Technology student at STI and an
+              aspiring Full Stack Developer passionate about building practical
+              and impactful digital solutions. I enjoy working on both the
+              frontend and backend, turning ideas into functional applications
+              that solve real-world problems. <br />
+              <br />
+              My current focus is improving my skills in modern web and mobile
+              development, building projects that strengthen my understanding of
+              system design, APIs, and user-friendly interfaces. I believe that
+              the best way to learn is by building real projects, experimenting
+              with new technologies, and continuously refining my
+              problem-solving skills.
+              <br />
+              <br />
+              As I continue my journey in software development, my goal is to
+              grow into a skilled developer who can create scalable, efficient,
+              and meaningful applications.
+            </p>
+          </div>
+        </section>
+        <section class="w-50 p-3 border rounded">
+          <h2>Section 2</h2>
+          <p>hello</p>
+        </section>
+      </div>
     </main>
 
     <script
