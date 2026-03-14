@@ -35,23 +35,27 @@
                 alt=""
               />
             </h1>
-            <ul class="list-unstyled text-secondary mb-0 fs-6">
-              <li><small>📍Based in Philippines</small></li>
-              <li><strong>💻Aspiring FullStack Developer</strong></li>
+            <ul class="list-unstyled mb-0 fs-6">
+              <li class="text-secondary">
+                <small>📍Based in Philippines</small>
+              </li>
+              <li>
+                <strong>💻Aspiring FullStack Developer</strong>
+              </li>
             </ul>
             <div class="w-100 d-flex flex-wrap gap-2 mt-2">
               <button
-                class="header-btn github-btn flex-fill flex-md-grow-0 btn-sm rounded-2 px-2 bg-dark text-white"
+                class="header-btn github-btn fw-semibold flex-fill flex-md-grow-0 btn-sm rounded-2 px-2 bg-dark text-white"
               >
-                <img src="./assets/images/github.png" class="icons" alt="" />
-                Github
+                <img src="./assets/images/mail.png" class="icons" alt="" />
+                <small>Send Email</small>
               </button>
               <button
                 id="cv-btn"
                 class="header-btn download-cv flex-fill flex-md-grow-0 btn-sm rounded-2 px-2 btn-outline-secondary text-black"
               >
                 <img src="./assets/images/file-text.png" class="icons" alt="" />
-                Download my CV
+                <small>Download my CV</small>
               </button>
             </div>
           </div>
@@ -61,10 +65,15 @@
           </button>
         </div>
       </header>
-      <div class="col-12 col-md-9 d-flex flex-column flex-lg-row gap-3 mt-4">
+      <div class="col-12 col-md-9 d-flex flex-column flex-lg-row mt-4">
         <section class="w-100 p-3">
-          <div class="about-me p-3 transition-all rounded-3">
-            <h4 class="fw-bold">About me</h4>
+          <div class="cards p-3 transition-all rounded-3">
+            <h5 class="fw-bold d-flex align-items-center gap-2">
+              <img
+                src="./assets/images/info-dark.png"
+                class="icons info-icon"
+              />About me
+            </h5>
             <p class="text-secondary">
               I’m a 3rd-year Information Technology student at STI and an
               aspiring Full Stack Developer passionate about building practical
@@ -86,9 +95,25 @@
             </p>
           </div>
         </section>
-        <section class="w-50 p-3 border rounded">
-          <h2>Section 2</h2>
-          <p>hello</p>
+        <section class="w-sm-100 w-md-50 p-3">
+          <div class="cards p-3 transition-all rounded-3">
+            <h5 class="fw-bold d-flex align-items-center gap-2">
+              <img
+                src="./assets/images/graduation-cap-dark.png"
+                class="icons gradcap-icon"
+              />Education
+            </h5>
+            <p class="fs-6 fw-bold">
+              <small>BS Information Technology - STI College Malolos</small>
+            </p>
+            <small class="text-secondary d-flex align-items-center gap-2"
+              ><img
+                src="./assets/images/calendar-days.png"
+                class="icons"
+                alt=""
+              />Aug 2022 - Aug 2027</small
+            >
+          </div>
         </section>
       </div>
     </main>

@@ -54,17 +54,17 @@
   width: 40px;
   border: 1px solid #dee2e6;
 }
-.about-me:hover {
+.cards:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 25px 1px rgb(242, 241, 241);
 }
-.about-me {
+.cards {
   border: 1px solid #dee2e6;
 }
-.dark-mode .about-me {
+.dark-mode .cards {
   border: 1px solid #414144ff;
 }
-.dark-mode .about-me:hover {
+.dark-mode .cards:hover {
   box-shadow: 0 15px 25px 1px rgb(28, 28, 28);
 }
 body {
