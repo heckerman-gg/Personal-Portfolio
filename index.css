@@ -20,11 +20,62 @@
   box-shadow: 0 5px 20px 1px rgb(209, 208, 208);
 }
 
+.socials {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 2px;
+  border: 1px solid #dee2e6;
+}
+
 .dark-mode .github-btn:hover,
 .dark-mode .download-cv:hover {
   box-shadow: 0 5px 20px 1px rgba(255, 255, 255, 0.15);
 }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 
+@media (min-width: 375px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .theme {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .header-btn {
+    width: 100%;
+    padding: 5px;
+  }
+  .container-header {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  header {
+    flex-direction: row;
+  }
+  .container-header {
+    display: flex;
+    text-align: left;
+  }
+  .header-btn {
+    width: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .dark-mode #cv-btn {
   color: black !important;
   border-color: #555;
