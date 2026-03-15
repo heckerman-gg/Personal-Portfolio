@@ -10,6 +10,9 @@ const gradcapIcon = document.querySelector(".gradcap-icon");
 const stackIcon = document.querySelector(".stack-icon");
 const skillsContainer = document.querySelectorAll(".tech-stack");
 const projectContainer = document.querySelector(".projects");
+const linkedinFooterBtn = document.querySelector(".linkedin-btn");
+const githubFooterBtn = document.querySelector(".github-footer-btn");
+const socials = document.querySelectorAll(".socials");
 console.log(projectContainer);
 console.log(cards);
 themeBtn.addEventListener("click", () => {
@@ -23,11 +26,18 @@ themeBtn.addEventListener("click", () => {
     gradcapIcon.src = "./assets/images/graduation-cap-light.png";
     stackIcon.src = "./assets/images/layers-light.png";
 
+    linkedinFooterBtn.src = "./assets/images/linkedin-light.png";
+
+    githubFooterBtn.src = "./assets/images/github.png";
+
     cards.forEach((card) => {
       card.classList.add("dark-mode");
     });
     skillsContainer.forEach((skill) => {
       skill.classList.add("dark-mode");
+    });
+    socials.forEach((social) => {
+      social.classList.add("dark-mode");
     });
   } else {
     themeBtn.innerHTML = "<img src='./assets/images/moon.png' alt='' />";
@@ -37,11 +47,18 @@ themeBtn.addEventListener("click", () => {
     infoIcon.src = "./assets/images/info-dark.png";
     gradcapIcon.src = "./assets/images/graduation-cap-dark.png";
     stackIcon.src = "./assets/images/layers-dark.png";
+    linkedinFooterBtn.src = "./assets/images/linkedin-light.png";
+
+    githubFooterBtn.src = "./assets/images/github.png";
+
     cards.forEach((card) => {
       card.classList.remove("dark-mode");
     });
     skillsContainer.forEach((skill) => {
       skill.classList.remove("dark-mode");
+    });
+    socials.forEach((social) => {
+      social.classList.remove("dark-mode");
     });
   }
 });

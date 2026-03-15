@@ -27,6 +27,10 @@
   padding: 2px;
   border: 1px solid #dee2e6;
 }
+.dark-mode .socials {
+  border-color: #414144ff;
+  background-color: #1f1f23ff;
+}
 
 .dark-mode .github-btn:hover,
 .dark-mode .download-cv:hover {
@@ -108,6 +112,12 @@
 .cards:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 25px 1px rgb(242, 241, 241);
+}
+.email-card {
+  border: 1px solid #dee2e6;
+}
+.dark-mode .email-card {
+  border: 1px solid #414144ff;
 }
 .cards {
   border: 1px solid #dee2e6;
