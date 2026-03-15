@@ -82,3 +82,25 @@ body {
   object-fit: cover;
   border-radius: 9px;
 }
+.tech-stack {
+  padding: 2px 8px;
+  border: 1px solid #dee2e6;
+  font-size: 14px;
+  border-radius: 6px;
+}
+.dark-mode .tech-stack {
+  border-color: #414144ff;
+}
+.section {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
