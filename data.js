@@ -17,10 +17,10 @@ export const techStack = {
 
 export const projects = [
   {
-    title: "Project 1",
-    description: "Description 1",
-    image: "./assets/images/project1.png",
-    link: "#",
+    title: "TaskFlow",
+    description: "Task management app",
+    image: "./assets/images/TaskFlow-screenshot.png",
+    link: "https://task-flow-theta-lemon.vercel.app/",
   },
   {
     title: "Project 2",

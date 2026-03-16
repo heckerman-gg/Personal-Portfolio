@@ -1,4 +1,4 @@
-import { projects, techStack } from "./index.js";
+import { projects, techStack } from "./data.js";
 
 const themeBtn = document.querySelector(".theme");
 const dlCv = document.getElementById("cv-btn");
@@ -13,6 +13,7 @@ const projectContainer = document.querySelector(".projects");
 const linkedinFooterBtn = document.querySelector(".linkedin-btn");
 const githubFooterBtn = document.querySelector(".github-footer-btn");
 const socials = document.querySelectorAll(".socials");
+let projectIcon = document.querySelector(".project-icon");
 console.log(projectContainer);
 console.log(cards);
 themeBtn.addEventListener("click", () => {
@@ -25,11 +26,8 @@ themeBtn.addEventListener("click", () => {
     infoIcon.src = "./assets/images/info-light.png";
     gradcapIcon.src = "./assets/images/graduation-cap-light.png";
     stackIcon.src = "./assets/images/layers-light.png";
-
     linkedinFooterBtn.src = "./assets/images/linkedin-light.png";
-
     githubFooterBtn.src = "./assets/images/github.png";
-
     cards.forEach((card) => {
       card.classList.add("dark-mode");
     });
@@ -47,10 +45,8 @@ themeBtn.addEventListener("click", () => {
     infoIcon.src = "./assets/images/info-dark.png";
     gradcapIcon.src = "./assets/images/graduation-cap-dark.png";
     stackIcon.src = "./assets/images/layers-dark.png";
-    linkedinFooterBtn.src = "./assets/images/linkedin-light.png";
-
-    githubFooterBtn.src = "./assets/images/github.png";
-
+    linkedinFooterBtn.src = "./assets/images/linkedin-dark.png";
+    githubFooterBtn.src = "./assets/images/github-dark.png";
     cards.forEach((card) => {
       card.classList.remove("dark-mode");
     });
@@ -75,39 +71,27 @@ const renderStack = (selector, items) => {
 
 const renderProjects = () => {
   if (projectContainer) {
-    let currentIndex = 0;
-    const updateCarousel = () => {
-      const project1 = projects[currentIndex];
-      const project2 = projects[(currentIndex + 1) % projects.length];
-      const isDark = document.body.classList.contains("dark-mode");
+    let isDark = document.body.classList.contains("dark-mode");
+    console.log(isDark);
+    const projectIcon = isDark
+      ? "./assets/images/panels-top-left-light.png"
+      : "./assets/images/panels-top-left-dark.png";
+    const createCard = (project) => `
+      <div class="project cards rounded flex-fill d-flex flex-column ${isDark ? "dark-mode" : ""}">
+        <img src="${project.image}" class="img-fluid" alt="${project.title}" style="object-fit: cover; width: 100%; height: 130px; border-radius: 8px;" />
+       <div class="p-2">
+        <h5 class="mt-1">${project.title}</h5>
+        <p class="text-secondary description">${project.description}</p>
+       <button class="project-link rounded mt-1"><a href="${project.link}" target="_blank" class="text-secondary text-decoration-none">View Project</a></button>
+       </div>
+      </div>`;
 
-      const createCard = (project) => `
-          <div class="project cards rounded flex-fill p-3 ${isDark ? "dark-mode" : ""}">
-            <img src="${project.image}" alt="${project.title}" />
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <a href="${project.link}">View Project</a>
-          </div>`;
-
-      projectContainer.innerHTML = `
-       <div class="d-flex w-100 align-items-center justify-content-center gap-3">
-        <button id="prev-btn" class="btn p-0 fs-1 text-body">&#8249;</button>
-        ${createCard(project1)}
-        ${createCard(project2)}
-        <button id="next-btn" class="btn p-0 fs-1 text-body">&#8250;</button>
+    projectContainer.innerHTML = `
+    <h1 class="fw-bold d-flex gap-2 align-items-center fs-5"> <img class="icons project-icon"  src="${projectIcon}" class="icons" alt="" />Projects</h1>
+      <div class="projects-grid gap-2 w-100">
+        ${projects.map(createCard).join("")}
       </div>
-      `;
-
-      document.getElementById("prev-btn").onclick = () => {
-        currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-        updateCarousel();
-      };
-      document.getElementById("next-btn").onclick = () => {
-        currentIndex = (currentIndex + 1) % projects.length;
-        updateCarousel();
-      };
-    };
-    updateCarousel();
+    `;
   }
 };
 renderProjects();
