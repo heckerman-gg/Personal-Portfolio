@@ -25,19 +25,19 @@ export const projects = [
   {
     title: "Project 2",
     description: "Description 2",
-    image: "./assets/images/project2.png",
+    image: "",
     link: "#",
   },
   {
     title: "Project 3",
     description: "Description 3",
-    image: "./assets/images/project3.png",
+    image: "",
     link: "#",
   },
   {
     title: "Project 4",
     description: "Description 4",
-    image: "./assets/images/project4.png",
+    image: "",
     link: "#",
   },
 ];
