@@ -19,14 +19,14 @@ export const projects = [
   {
     title: "TaskFlow",
     description: "Task management app",
-    image: "./assets/images/TaskFlow-screenshot.png",
+    image: "./assets/project-screenshots/TaskFlow.png",
     link: "https://task-flow-theta-lemon.vercel.app/",
   },
   {
-    title: "Project 2",
-    description: "Description 2",
-    image: "",
-    link: "#",
+    title: "Browser Extension Manager",
+    description: "A landing page of browser extension manager",
+    image: "./assets/project-screenshots/preview.jpg",
+    link: "https://browser-extensions-manager-flax.vercel.app/",
   },
   {
     title: "Project 3",

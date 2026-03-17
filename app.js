@@ -91,11 +91,11 @@ const renderProjects = () => {
       : "./assets/images/panels-top-left-dark.png";
     const createCard = (project) => `
       <div class="project cards rounded flex-fill d-grid ${isDark ? "dark-mode" : ""}" style="grid-template-rows: 130px 1fr;">
-        <img src="${project.image}" alt="${project.title}" style="object-fit: cover; width: 100%; height: 100%; border-radius: 8px 8px 0 0;" />
+        <img src="${project.image}" alt="${project.title}" style="object-fit: contain; width: 100%; height: 100%; border-radius: 8px 8px 0 0;" />
        <div class="p-2 d-flex flex-column justify-content-between">
          <div>
-          <h5 class="mt-1">${project.title}</h5>
-          <p class="text-secondary description">${project.description}</p>
+          <h6 class="mt-1">${project.title}</h6>
+          <p class="text-secondary description"><small>${project.description}</small></p>
          </div>
          <button class="project-link ${isDark ? "dark-mode border-secondary" : ""} rounded mt-auto"><a href="${project.link}" target="_blank" class="text-secondary text-decoration-none">View Project</a></button>
        </div>
