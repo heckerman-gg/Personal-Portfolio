@@ -90,8 +90,8 @@ const renderProjects = () => {
       ? "./assets/images/panels-top-left-light.png"
       : "./assets/images/panels-top-left-dark.png";
     const createCard = (project) => `
-      <div class="project cards rounded flex-fill d-flex flex-column ${isDark ? "dark-mode" : ""}" style="grid-template-rows: 130px 1fr;">
-        <img src="${project.image}" class="img-fluid" alt="${project.title}" style="object-fit: cover; width: 100%; height: 100%; border-radius: 8px 8px 0 0;" />
+      <div class="project cards rounded flex-fill d-grid ${isDark ? "dark-mode" : ""}" style="grid-template-rows: 130px 1fr;">
+        <img src="${project.image}" alt="${project.title}" style="object-fit: cover; width: 100%; height: 100%; border-radius: 8px 8px 0 0;" />
        <div class="p-2 d-flex flex-column justify-content-between">
          <div>
           <h5 class="mt-1">${project.title}</h5>
