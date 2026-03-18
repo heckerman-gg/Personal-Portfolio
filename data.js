@@ -10,8 +10,9 @@ export const techStack = {
     "Motion",
     "TypeScript",
     "Flutter",
+    "shadcn/ui",
   ],
-  backend: ["Node.js", "Express.js", "C#", "MongoDB"],
+  backend: ["Node.js", "Express.js", "C#", "MySQL", "MongoDB"],
   tools: ["Git & GitHub", "Figma", "Postman", "FlutterFlow"],
 };
 
@@ -19,7 +20,7 @@ export const projects = [
   {
     title: "TaskFlow",
     description: "Task management app",
-    image: "./assets/project-screenshots/TaskFlow.png",
+    image: "./assets/project-screenshots/TaskFLow.png",
     link: "https://task-flow-theta-lemon.vercel.app/",
   },
   {
