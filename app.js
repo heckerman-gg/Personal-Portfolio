@@ -16,7 +16,7 @@ const pfpContainer = document.querySelector(".profile-img-container");
 const renderVideo = () => {
   const isDark = document.body.classList.contains("dark-mode");
   if (!isDark) {
-    pfpContainer.innerHTML = `<video src="./assets/images/with-shades.mp4" class="pfp-video" muted></video>`;
+    pfpContainer.innerHTML = `<video src="./assets/images/with-shades.mp4" class="pfp-video" autoplay muted></video>`;
 
     const pfpVideo = document.querySelector(".pfp-video");
 
@@ -31,7 +31,7 @@ const renderVideo = () => {
       pfpContainer.innerHTML = `<img src="./assets/images/with-shades.png" class="pfp-img" />`;
     });
   } else {
-    pfpContainer.innerHTML = `<video src="./assets/images/waking_up.mp4" class="pfp-video" muted></video>`;
+    pfpContainer.innerHTML = `<video src="./assets/images/removing_his_shades_and_background_turn_night.mp4" class="pfp-video" autoplay muted></video>`;
 
     const pfpVideo = document.querySelector(".pfp-video");
 
