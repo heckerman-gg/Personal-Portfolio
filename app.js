@@ -11,6 +11,42 @@ const projectContainer = document.querySelector(".projects");
 const linkedinFooterBtn = document.querySelector(".linkedin-btn");
 const githubFooterBtn = document.querySelector(".github-footer-btn");
 const socials = document.querySelectorAll(".socials");
+const pfpContainer = document.querySelector(".profile-img-container");
+
+const renderVideo = () => {
+  const isDark = document.body.classList.contains("dark-mode");
+  if (!isDark) {
+    pfpContainer.innerHTML = `<video src="./assets/images/with-shades.mp4" class="pfp-video" muted></video>`;
+
+    const pfpVideo = document.querySelector(".pfp-video");
+
+    const playOnce = () => {
+      pfpVideo.play();
+      pfpVideo.removeEventListener("mouseenter", playOnce); // disable hover after first play
+    };
+
+    pfpVideo.addEventListener("mouseenter", playOnce);
+
+    pfpVideo.addEventListener("ended", () => {
+      pfpContainer.innerHTML = `<img src="./assets/images/with-shades.png" class="pfp-img" />`;
+    });
+  } else {
+    pfpContainer.innerHTML = `<video src="./assets/images/waking_up.mp4" class="pfp-video" muted></video>`;
+
+    const pfpVideo = document.querySelector(".pfp-video");
+
+    const playOnce = () => {
+      pfpVideo.play();
+      pfpVideo.removeEventListener("mouseenter", playOnce); // disable hover after first play
+    };
+
+    pfpVideo.addEventListener("mouseenter", playOnce);
+
+    pfpVideo.addEventListener("ended", () => {
+      pfpContainer.innerHTML = `<img src="./assets/images/night-mode-pfp.png" class="pfp-img" />`;
+    });
+  }
+};
 
 themeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
@@ -18,12 +54,13 @@ themeBtn.addEventListener("click", () => {
     themeBtn.innerHTML = "<img src='./assets/images/sun.png' alt='' />";
     themeBtn.style.borderColor = "#414144ff";
     themeBtn.style.backgroundColor = "#1f1f23ff";
-    profilePic.src = "./assets/images/pfp-sleeping.png";
+
     infoIcon.src = "./assets/images/info-light.png";
     gradcapIcon.src = "./assets/images/graduation-cap-light.png";
     stackIcon.src = "./assets/images/layers-light.png";
     linkedinFooterBtn.src = "./assets/images/linkedin-light.png";
     githubFooterBtn.src = "./assets/images/github.png";
+
     cards.forEach((card) => {
       card.classList.add("dark-mode");
     });
@@ -34,24 +71,26 @@ themeBtn.addEventListener("click", () => {
       social.classList.add("dark-mode");
     });
 
-    profilePic.addEventListener("mouseover", () => {
-      profilePic.src = "./assets/images/night-mode-pfp.png";
-    });
-    profilePic.addEventListener("mouseout", () => {
-      profilePic.src = "./assets/images/pfp-sleeping.png";
-    });
+    // profilePic.addEventListener("mouseover", () => {
+    //   profilePic.src = "./assets/images/night-mode-pfp.png";
+    // });
+    // profilePic.addEventListener("mouseout", () => {
+    //   profilePic.src = "./assets/images/pfp-sleeping.png";
+    // });
 
     renderProjects();
+    renderVideo();
   } else {
     themeBtn.innerHTML = "<img src='./assets/images/moon.png' alt='' />";
     themeBtn.style.borderColor = "#949595ff";
     themeBtn.style.backgroundColor = "#f1f2f3ff";
-    profilePic.src = "./assets/images/light-mode-pfp.png";
+    // profilePic.src = "./assets/images/light-mode-pfp.png";
     infoIcon.src = "./assets/images/info-dark.png";
     gradcapIcon.src = "./assets/images/graduation-cap-dark.png";
     stackIcon.src = "./assets/images/layers-dark.png";
     linkedinFooterBtn.src = "./assets/images/linkedin-dark.png";
     githubFooterBtn.src = "./assets/images/github-dark.png";
+
     cards.forEach((card) => {
       card.classList.remove("dark-mode");
     });
@@ -62,14 +101,8 @@ themeBtn.addEventListener("click", () => {
       social.classList.remove("dark-mode");
     });
 
-    profilePic.addEventListener("mouseover", () => {
-      profilePic.src = "./assets/images/light-mode-pfp.png";
-    });
-
-    profilePic.addEventListener("mouseout", () => {
-      profilePic.src = "./assets/images/light-mode-pfp.png";
-    });
     renderProjects();
+    renderVideo();
   }
 });
 
@@ -109,6 +142,7 @@ const renderProjects = () => {
     `;
   }
 };
+renderVideo();
 renderProjects();
 renderStack(".frontend", techStack.frontend);
 renderStack(".backend", techStack.backend);
