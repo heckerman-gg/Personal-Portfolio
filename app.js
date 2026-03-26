@@ -31,7 +31,7 @@ const renderVideo = () => {
       pfpContainer.innerHTML = `<img src="./assets/images/with-shades.png" class="pfp-img" />`;
     });
   } else {
-    pfpContainer.innerHTML = `<video src="./assets/images/removing_his_shades_and_background_turn_night.mp4" class="pfp-video" autoplay muted></video>`;
+    pfpContainer.innerHTML = `<video src="./assets/images/to-night.mp4" class="pfp-video" autoplay muted></video>`;
 
     const pfpVideo = document.querySelector(".pfp-video");
 
